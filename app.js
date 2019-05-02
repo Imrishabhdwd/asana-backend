@@ -7,7 +7,7 @@ import path from 'path'
 import multer from 'multer'
 import env from 'dotenv'
 let app = express()
-app.use(cors())
+app.use(cors({credentials: true, origin: true}))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 env.load()
